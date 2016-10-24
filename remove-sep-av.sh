@@ -7,7 +7,7 @@
 
 # Start by setting up the array variable to hold all the files and folders we're going to delete
 
-delete[0]=""
+delete[0]="/var/tmp/symantec_error_report"
 delete[1]="/.com_symantec_symfs_private"
 delete[2]="/.symSchedScanLockxz"
 delete[3]="/Applications/Firefox.app/Contents/MacOS/extensions/{0e10f3d7-07f6-4f12-97b9-9b27e07139a5}"
@@ -19,7 +19,7 @@ delete[8]="/Applications/LiveUpdate"
 delete[9]="/Applications/LiveUpdate Folder"
 delete[10]="/Applications/LiveUpdate Folder (OS X)"
 delete[11]="/Applications/navx"
-delete[12]="/Applications/Norton " 
+delete[12]="/Applications/Norton"
 delete[13]="/Applications/Symantec AntiVirus"
 delete[14]="/Applications/Symantec Cloud Security.app"
 delete[15]="/Applications/Symantec Endpoint Protection.app"
@@ -220,7 +220,6 @@ delete[209]="/var/root/Library/Contextual Menu Items/NAVCMPlugIn.plugin"
 delete[210]="/var/root/Library/Contextual Menu Items"  
 delete[211]="/var/tmp/com.symantec" 
 delete[212]="/var/tmp/com.Symantec" 
-delete[213]="/var/tmp/symantec_error_report" 
 
 # Let's do the deleting!
 
