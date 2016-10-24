@@ -7,7 +7,7 @@
 # Start by setting up the array variable to hold all the files and folders we're going to delete
 
 delete[0]="/Applications/Intego/*"
-delete[1]="/Applications/Panda Antivirus.app"
+delete[1]="/Applications/VirusBarrier.app"
 delete[2]="/Library/Frameworks/IntegoiCalFramework.framework"
 delete[3]="/Library/LaunchAgents/com.intego.*"
 delete[4]="/Library/LaunchDaemons/com.intego.*"
