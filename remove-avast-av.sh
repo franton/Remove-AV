@@ -19,7 +19,7 @@ tLen=${#launchd[@]}
 for (( i=0; i<${tLen}; i++ ));
 do
   echo "Now unloading "${launchd[$i]}
-  launchctl disable ${delete[$i]}
+  launchctl disable ${launchd[$i]}
 done
 
 # Setting up the array variable to hold all the files and folders we're going to delete
