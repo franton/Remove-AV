@@ -1,11 +1,29 @@
 #!/bin/bash
 
-# Very unsophisticated script to remove all specified SEP AV files and folders
+# Moderately unsophisticated script to remove all specified SEP AV files and folders
 # Pulled apart from the original Symantec uninstall script
 # Author  : richard at richard - purves dot com
 # Version : 1.0 - Initial Version
+# Version : 1.1 - Now unloads launchd plists at the suggestion of Tom Bridge
 
-# Start by setting up the array variable to hold all the files and folders we're going to delete
+# Start by setting up the array with all the running launchagents/daemons running
+
+launchd=( $(launchctl list | grep -E 'com.norton|com.symantec' | awk '{print $3}' ) )
+
+# Now recursively unload all these
+
+# Calculate the length of the launchd array.
+tLen=${#launchd[@]}
+
+# Loop around the array and delete the files/folders.
+
+for (( i=0; i<${tLen}; i++ ));
+do
+  echo "Now unloading "${launchd[$i]}
+  launchctl disable ${delete[$i]}
+done
+
+# Now set up the array variable to hold all the files and folders we're going to delete
 
 delete[0]="/var/tmp/symantec_error_report"
 delete[1]="/.com_symantec_symfs_private"
