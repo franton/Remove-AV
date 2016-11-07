@@ -4,6 +4,7 @@
 # Author  : richard at richard - purves dot com
 # Version : 1.0 - Initial Version
 # Version : 1.1 - Now unloads launchd plists at the suggestion of Tom Bridge
+# Version : 1.2 - Now forgets installer pkgs at the suggestion of Francois Leveaux-Tiffreau
 
 # Start by setting up the array with all the running launchagents/daemons running
 
@@ -12,6 +13,7 @@ launchd=( $(launchctl list | grep com.avast | awk '{print $3}' ) )
 # Now recursively unload all these
 
 # Calculate the length of the launchd array.
+
 tLen=${#launchd[@]}
 
 # Loop around the array and delete the files/folders.
@@ -34,6 +36,7 @@ delete[5]="/Library/LaunchDaemons/com.avast.*"
 # Let's do the deleting!
 
 # Calculate the length of the delete array.
+
 tLen=${#delete[@]}
 
 # Loop around the array and delete the files/folders.
@@ -54,5 +57,9 @@ do
 		rm -rf "/Users/$USERS/Library/LaunchAgents/Avast"
 	fi
 done
+
+# Finally get the mac to forget that it ever installed this product
+
+pkgutil --pkgs | grep avast | xargs pkgutil --forget
 
 exit 0
