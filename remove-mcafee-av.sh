@@ -4,6 +4,7 @@
 # Pulled apart from the original Symantec uninstall script
 # Author  : fti at me dot com
 # Version : 1.0 - Initial Version
+# Version : 1.2 - Now forgets installer pkgs.
 
 # Start by setting up the array with all the running launchagents/daemons running
 
@@ -60,18 +61,17 @@ do
   rm -rf ${delete[$i]}
 done
 
+# Finally get the mac to forget that it ever installed this product
 
-# Remove package receipts
+# Get all the pkg receipts left on the system
 
-receipt[0]="com.mcafee.dxl"
-receipt[1]="com.mcafee.mscui"
-receipt[2]="com.mcafee.ssm.fmp"
-receipt[3]="com.mcafee.ssm.mcp"
+receipts=$( $( pkgutil --pkgs | grep mcafee ) )
 
 # Calculate the length of the receipt array.
-tLen=${#receipt[@]}
 
-# Loop around the array and delete the files/folders.
+tLen=${#receipts[@]}
+
+# Loop around the array and remove the receipts.
 
 for (( i=0; i<${tLen}; i++ ));
 do

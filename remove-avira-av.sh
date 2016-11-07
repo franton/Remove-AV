@@ -58,6 +58,20 @@ done
 
 # Finally get the mac to forget that it ever installed this product
 
-pkgutil --pkgs | grep avira | xargs pkgutil --forget
+# Get all the pkg receipts left on the system
+
+receipts=$( $( pkgutil --pkgs | grep avira ) )
+
+# Calculate the length of the receipt array.
+
+tLen=${#receipts[@]}
+
+# Loop around the array and remove the receipts.
+
+for (( i=0; i<${tLen}; i++ ));
+do
+  echo "Now removing receipt "${receipt[$i]}
+  pkgutil --forget ${receipt[$i]}
+done
 
 exit 0
