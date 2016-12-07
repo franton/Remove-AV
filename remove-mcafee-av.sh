@@ -24,28 +24,21 @@ done
 
 # Now set up the array variable to hold all the files and folders we're going to delete
 
-delete[0]="/Library/LaunchDaemons/com.mcafee.dxl.plist"                       
+delete[0]="/Library/LaunchDaemons/com.mcafee.*.plist"                       
 delete[1]="/etc/init.d/dx"                                                    
 delete[2]="/etc/ma.d/DXL_____1000/config.xml"                                 
 delete[3]="/etc/ma.d/DXL_____1000/"                                           
-delete[4]="/opt/McAfee/"                                                      
-delete[5]="/var/McAfee/"                                                      
+delete[4]="/opt/McAfee"                                                      
+delete[5]="/var/McAfee"                                                      
 delete[6]="/Applications/McAfee Endpoint Security for Mac.app"                
 delete[7]="/Library/Application Support/McAfee"                               
 delete[8]="/Library/Documentation/Help/McAfeeSecurity_CommonPolicy.help"      
-delete[9]="/Library/LaunchAgents/com.mcafee.menulet.plist"                    
-delete[10]="/Library/LaunchAgents/com.mcafee.reporter.plist"                  
-delete[11]="/usr/local/McAfee/"                                               
-delete[12]="/usr/local/McAfee/"                                               
-delete[13]="/Library/LaunchDaemons/com.mcafee.virusscan.fmpd.plist"           
-delete[14]="/private/etc/cma.d/ENDP_GS_1000MACX/config.xml"                   
-delete[15]="/private/etc/cma.d/ENDP_GS_1000MACX/"                             
-delete[16]="/usr/local/McAfee"                                                
-delete[17]="/Library/Application\ Support/McAfee"                             
-delete[18]="/Library/Preferences/com.mcafee.ssm.mcp.plist"                    
-delete[19]="/private/etc/cma.d/MCPAGENT2000MACX/config.xml"                   
-delete[20]="/private/etc/cma.d/MCPAGENT2000MACX"                              
-delete[21]="/usr/local/McAfee"            
+delete[9]="/Library/LaunchAgents/com.mcafee.*.plist"                    
+delete[10]="/usr/local/McAfee"                                                                             
+delete[11]="/Library/LaunchDaemons/com.mcafee.*.plist"           
+delete[12]="/private/etc/cma.d"                                                                       
+delete[13]="/Library/Application\ Support/McAfee"                             
+delete[14]="/Library/Preferences/com.mcafee.ssm.mcp.plist"
 
 # Let's do the deleting!
 
