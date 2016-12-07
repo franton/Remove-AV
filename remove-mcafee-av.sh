@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Moderately unsophisticated script to remove all specified SEP AV files and folders
-# Pulled apart from the original Symantec uninstall script
 # Author  : fti at me dot com
 # Version : 1.0 - Initial Version
 # Version : 1.2 - Now forgets installer pkgs.
