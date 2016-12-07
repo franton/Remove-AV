@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Moderately unsophisticated script to remove all specified SEP AV files and folders
+# Moderately unsophisticated script to remove all specified McAfee EPM AV files and folders
 # Author  : fti at me dot com
 # Version : 1.0 - Initial Version
 # Version : 1.2 - Now forgets installer pkgs.
@@ -24,21 +24,18 @@ done
 
 # Now set up the array variable to hold all the files and folders we're going to delete
 
-delete[0]="/Library/LaunchDaemons/com.mcafee.*.plist"                       
-delete[1]="/etc/init.d/dx"                                                    
-delete[2]="/etc/ma.d/DXL_____1000/config.xml"                                 
-delete[3]="/etc/ma.d/DXL_____1000/"                                           
-delete[4]="/opt/McAfee"                                                      
-delete[5]="/var/McAfee"                                                      
-delete[6]="/Applications/McAfee Endpoint Security for Mac.app"                
-delete[7]="/Library/Application Support/McAfee"                               
-delete[8]="/Library/Documentation/Help/McAfeeSecurity_CommonPolicy.help"      
-delete[9]="/Library/LaunchAgents/com.mcafee.*.plist"                    
-delete[10]="/usr/local/McAfee"                                                                             
-delete[11]="/Library/LaunchDaemons/com.mcafee.*.plist"           
-delete[12]="/private/etc/cma.d"                                                                       
-delete[13]="/Library/Application\ Support/McAfee"                             
-delete[14]="/Library/Preferences/com.mcafee.ssm.mcp.plist"
+delete[0]="/Library/LaunchDaemons/com.mcafee*"
+delete[1]="/etc/init.d/dx"
+delete[2]="/etc/ma.d/DXL_____1000"                                
+delete[3]="/opt/McAfee"                                           
+delete[4]="/var/McAfee"
+delete[5]="/Applications/McAfee Endpoint Security for Mac.app"
+delete[6]="/Library/Documentation/Help/McAfeeSecurity_CommonPolicy.help"
+delete[7]="/Library/LaunchAgents/com.mcafee.*.plist"
+delete[8]="/usr/local/McAfee"
+delete[9]="/private/etc/cma.d"
+delete[10]="/Library/Application\ Support/McAfee"
+delete[11]="/Library/Preferences/com.mcafee.*.plist"
 
 # Let's do the deleting!
 
