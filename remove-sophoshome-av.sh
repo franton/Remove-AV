@@ -54,7 +54,7 @@ done
 
 # Get all the pkg receipts left on the system
 
-receipts=$( $( pkgutil --pkgs | grep sophos ) )
+receipts=( $( pkgutil --pkgs | grep sophos ) )
 
 # Calculate the length of the receipt array.
 
@@ -64,8 +64,8 @@ tLen=${#receipts[@]}
 
 for (( i=0; i<${tLen}; i++ ));
 do
-  echo "Now removing receipt "${receipt[$i]}
-  pkgutil --forget ${receipt[$i]}
+  echo "Now removing receipt "${receipts[$i]}
+  pkgutil --forget ${receipts[$i]}
 done
 
 exit 0
