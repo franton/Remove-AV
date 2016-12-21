@@ -25,17 +25,18 @@ done
 # Now set up the array variable to hold all the files and folders we're going to delete
 
 delete[0]="/Library/LaunchDaemons/com.mcafee*"
-delete[1]="/etc/init.d/dx"
-delete[2]="/etc/ma.d/DXL_____1000"                                
-delete[3]="/opt/McAfee"                                           
-delete[4]="/var/McAfee"
-delete[5]="/Applications/McAfee\ Endpoint\ Security\ for\ Mac.app"
-delete[6]="/Library/Documentation/Help/McAfeeSecurity_CommonPolicy.help"
-delete[7]="/Library/LaunchAgents/com.mcafee.*.plist"
-delete[8]="/usr/local/McAfee"
-delete[9]="/private/etc/cma.d"
-delete[10]="/Library/Application\ Support/McAfee"
-delete[11]="/Library/Preferences/com.mcafee.*.plist"
+delete[1]="/Library/LaunchAgents/com.mcafee*"
+delete[2]="/private/etc/init.d/dx"
+delete[3]="/private/etc/ma.d"
+delete[4]="/private/etc/cma.d"                                
+delete[5]="/opt/McAfee"                                           
+delete[6]="/private/var/McAfee"
+delete[7]="/Applications/McAfee\ Endpoint\ Security\ for\ Mac.app"
+delete[8]="/Library/Documentation/Help/McAfeeSecurity_CommonPolicy.help"
+delete[9]="/usr/local/McAfee"
+delete[10]="/Library/McAfee"
+delete[11]="/Library/Application\ Support/McAfee"
+delete[12]="/Library/Preferences/com.mcafee*"
 
 # Let's do the deleting!
 
